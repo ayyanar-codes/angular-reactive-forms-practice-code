@@ -1,0 +1,8 @@
+<h1>Binding Radio Buttons</h1>
+
+<form [formGroup]="myForm" (submit)="fnSubmit()">
+  <label><input type="checkbox" formControlName="termsAndConditions" value="0">Terms and Conditions</label>
+  <button type="submit">Check Result</button>
+</form>
+
+<router-outlet />

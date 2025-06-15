@@ -1,0 +1,11 @@
+<h1>Select Element</h1>
+
+<form [formGroup]="myForm" (submit)="fnSubmit()">
+  <label>City</label>
+  <select formControlName="city">
+    <option *ngFor="let data of cityLookUp" [value]="data.key">{{ data.value }}</option>
+  </select>
+  <button type="submit">Check Result</button>
+</form>
+
+<router-outlet />
