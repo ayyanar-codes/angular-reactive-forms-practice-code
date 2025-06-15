@@ -1,3 +1,9 @@
+
+To Create a new project:
+ng g application <project_name>
+
+To Run a project in Mono repo:
+ng serve <project_name>
 # ReactiveFormsPracticeCode
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
