@@ -1,0 +1,1075 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "1.form-control-example": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/1.form-control-example",
+      "sourceRoot": "projects/1.form-control-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/1.form-control-example",
+            "index": "projects/1.form-control-example/src/index.html",
+            "browser": "projects/1.form-control-example/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/1.form-control-example/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/1.form-control-example/public"
+              }
+            ],
+            "styles": [
+              "projects/1.form-control-example/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "1.form-control-example:build:production"
+            },
+            "development": {
+              "buildTarget": "1.form-control-example:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/1.form-control-example/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/1.form-control-example/public"
+              }
+            ],
+            "styles": [
+              "projects/1.form-control-example/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "2.form-control-example2": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/2.form-control-example2",
+      "sourceRoot": "projects/2.form-control-example2/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/2.form-control-example2",
+            "index": "projects/2.form-control-example2/src/index.html",
+            "browser": "projects/2.form-control-example2/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/2.form-control-example2/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/2.form-control-example2/public"
+              }
+            ],
+            "styles": [
+              "projects/2.form-control-example2/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "2.form-control-example2:build:production"
+            },
+            "development": {
+              "buildTarget": "2.form-control-example2:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/2.form-control-example2/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/2.form-control-example2/public"
+              }
+            ],
+            "styles": [
+              "projects/2.form-control-example2/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "2.form-control-example": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/2.form-control-example",
+      "sourceRoot": "projects/2.form-control-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/2.form-control-example",
+            "index": "projects/2.form-control-example/src/index.html",
+            "browser": "projects/2.form-control-example/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/2.form-control-example/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/2.form-control-example/public"
+              }
+            ],
+            "styles": [
+              "projects/2.form-control-example/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "2.form-control-example:build:production"
+            },
+            "development": {
+              "buildTarget": "2.form-control-example:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/2.form-control-example/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/2.form-control-example/public"
+              }
+            ],
+            "styles": [
+              "projects/2.form-control-example/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "3.form-set-value": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/3.form-set-value",
+      "sourceRoot": "projects/3.form-set-value/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/3.form-set-value",
+            "index": "projects/3.form-set-value/src/index.html",
+            "browser": "projects/3.form-set-value/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/3.form-set-value/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/3.form-set-value/public"
+              }
+            ],
+            "styles": [
+              "projects/3.form-set-value/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "3.form-set-value:build:production"
+            },
+            "development": {
+              "buildTarget": "3.form-set-value:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/3.form-set-value/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/3.form-set-value/public"
+              }
+            ],
+            "styles": [
+              "projects/3.form-set-value/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "4.form-group-example": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/4.form-group-example",
+      "sourceRoot": "projects/4.form-group-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/4.form-group-example",
+            "index": "projects/4.form-group-example/src/index.html",
+            "browser": "projects/4.form-group-example/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/4.form-group-example/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/4.form-group-example/public"
+              }
+            ],
+            "styles": [
+              "projects/4.form-group-example/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "4.form-group-example:build:production"
+            },
+            "development": {
+              "buildTarget": "4.form-group-example:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/4.form-group-example/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/4.form-group-example/public"
+              }
+            ],
+            "styles": [
+              "projects/4.form-group-example/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "5.nested-form-group": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/5.nested-form-group",
+      "sourceRoot": "projects/5.nested-form-group/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/5.nested-form-group",
+            "index": "projects/5.nested-form-group/src/index.html",
+            "browser": "projects/5.nested-form-group/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/5.nested-form-group/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/5.nested-form-group/public"
+              }
+            ],
+            "styles": [
+              "projects/5.nested-form-group/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "5.nested-form-group:build:production"
+            },
+            "development": {
+              "buildTarget": "5.nested-form-group:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/5.nested-form-group/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/5.nested-form-group/public"
+              }
+            ],
+            "styles": [
+              "projects/5.nested-form-group/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "6.form-array-example": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/6.form-array-example",
+      "sourceRoot": "projects/6.form-array-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/6.form-array-example",
+            "index": "projects/6.form-array-example/src/index.html",
+            "browser": "projects/6.form-array-example/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/6.form-array-example/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/6.form-array-example/public"
+              }
+            ],
+            "styles": [
+              "projects/6.form-array-example/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "6.form-array-example:build:production"
+            },
+            "development": {
+              "buildTarget": "6.form-array-example:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/6.form-array-example/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/6.form-array-example/public"
+              }
+            ],
+            "styles": [
+              "projects/6.form-array-example/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "7.form-builder-example": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/7.form-builder-example",
+      "sourceRoot": "projects/7.form-builder-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/7.form-builder-example",
+            "index": "projects/7.form-builder-example/src/index.html",
+            "browser": "projects/7.form-builder-example/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/7.form-builder-example/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/7.form-builder-example/public"
+              }
+            ],
+            "styles": [
+              "projects/7.form-builder-example/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "7.form-builder-example:build:production"
+            },
+            "development": {
+              "buildTarget": "7.form-builder-example:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/7.form-builder-example/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/7.form-builder-example/public"
+              }
+            ],
+            "styles": [
+              "projects/7.form-builder-example/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "8.binding-radio-bottons": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/8.binding-radio-bottons",
+      "sourceRoot": "projects/8.binding-radio-bottons/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/8.binding-radio-bottons",
+            "index": "projects/8.binding-radio-bottons/src/index.html",
+            "browser": "projects/8.binding-radio-bottons/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/8.binding-radio-bottons/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/8.binding-radio-bottons/public"
+              }
+            ],
+            "styles": [
+              "projects/8.binding-radio-bottons/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "8.binding-radio-bottons:build:production"
+            },
+            "development": {
+              "buildTarget": "8.binding-radio-bottons:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/8.binding-radio-bottons/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/8.binding-radio-bottons/public"
+              }
+            ],
+            "styles": [
+              "projects/8.binding-radio-bottons/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "9.binding-checkbox": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/9.binding-checkbox",
+      "sourceRoot": "projects/9.binding-checkbox/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/9.binding-checkbox",
+            "index": "projects/9.binding-checkbox/src/index.html",
+            "browser": "projects/9.binding-checkbox/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/9.binding-checkbox/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/9.binding-checkbox/public"
+              }
+            ],
+            "styles": [
+              "projects/9.binding-checkbox/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "9.binding-checkbox:build:production"
+            },
+            "development": {
+              "buildTarget": "9.binding-checkbox:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/9.binding-checkbox/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/9.binding-checkbox/public"
+              }
+            ],
+            "styles": [
+              "projects/9.binding-checkbox/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "9.binding-select-element": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/9.binding-select-element",
+      "sourceRoot": "projects/9.binding-select-element/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/9.binding-select-element",
+            "index": "projects/9.binding-select-element/src/index.html",
+            "browser": "projects/9.binding-select-element/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/9.binding-select-element/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/9.binding-select-element/public"
+              }
+            ],
+            "styles": [
+              "projects/9.binding-select-element/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "9.binding-select-element:build:production"
+            },
+            "development": {
+              "buildTarget": "9.binding-select-element:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/9.binding-select-element/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/9.binding-select-element/public"
+              }
+            ],
+            "styles": [
+              "projects/9.binding-select-element/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "10.binding-select-element": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/10.binding-select-element",
+      "sourceRoot": "projects/10.binding-select-element/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/10.binding-select-element",
+            "index": "projects/10.binding-select-element/src/index.html",
+            "browser": "projects/10.binding-select-element/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/10.binding-select-element/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/10.binding-select-element/public"
+              }
+            ],
+            "styles": [
+              "projects/10.binding-select-element/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "10.binding-select-element:build:production"
+            },
+            "development": {
+              "buildTarget": "10.binding-select-element:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/10.binding-select-element/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/10.binding-select-element/public"
+              }
+            ],
+            "styles": [
+              "projects/10.binding-select-element/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

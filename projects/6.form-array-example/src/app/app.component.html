@@ -1,0 +1,20 @@
+
+
+
+<h1>Application</h1>
+
+<button (click)="fnAddNew()">Add</button><br>
+<button (click)="fnRemove()" [disabled]="isDisableRemoveBtn">Remove</button><br>
+<form [formGroup]="myForm">
+  <ng-container formArrayName="colors">
+
+    <div *ngFor="let _ of colors.controls; let idx = index">
+      <ng-container [formGroupName]="idx">
+        <input type="text" formControlName="name" >
+      </ng-container>
+    </div>
+
+  </ng-container>
+</form>
+
+<router-outlet />

@@ -1,0 +1,21 @@
+<h1>Application</h1>
+<button (click)="fnSetValue()">Set Value</button><br>
+
+
+<form [formGroup]="myForm" (submit)="fnSubmit()">
+  <div formGroupName="basicInfo">
+    <input type="text" placeholder="First Name" formControlName="firstName"><br>
+    <input type="text" placeholder="Last Name" formControlName="lastName"><br>
+    <input type="text" placeholder="Email" formControlName="email"><br>
+    <input type="text" placeholder="Age" formControlName="age"><br>
+  </div><br><br>
+  <div formGroupName="address">
+    <input type="text" placeholder="Address Line 1" formControlName="addressLine1"><br>
+    <input type="text" placeholder="Address ine 2" formControlName="addressLine2"><br>
+    <input type="text" placeholder="City" formControlName="city"><br>
+    <input type="text" placeholder="Zip Code" formControlName="zipCode"><br>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<router-outlet />

@@ -1,0 +1,12 @@
+
+<h1>Application</h1>
+
+<input type="text" placeholder="First Name" [formControl]="firstName">
+<input type="text" placeholder="Last Name" [formControl]="lastName">
+
+<div>
+  <label>{{firstName.value}}</label><br>
+  <label>{{lastName.value}}</label>
+</div>
+
+<router-outlet />

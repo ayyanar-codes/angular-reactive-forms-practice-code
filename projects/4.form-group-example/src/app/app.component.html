@@ -1,0 +1,10 @@
+
+<h1>Application</h1>
+
+<form [formGroup]="myForm" (submit)="fnSubmit()">
+  <input type="text" placeholder="First Name" formControlName="firstName">
+  <input type="text" placeholder="Last Name" formControlName="lastName">
+  <button type="submit">Submit</button>
+</form>   
+  
+<router-outlet />
