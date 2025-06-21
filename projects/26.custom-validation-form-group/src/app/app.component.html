@@ -1,0 +1,39 @@
+
+<h1>{{title}}</h1>
+
+<form [formGroup]="myForm" (submit)="fnSubmit()">
+
+  <div>
+    <label for="sourceElem">Source</label>
+    <select id="sourceElem" name="sourceElem" formControlName="source">
+      <option value="0">Select</option>
+      @for (city of cityLookups; track city) {
+        <option [value]="city.key">{{city.value}}</option>
+      }
+    </select><br>
+    <small *ngIf="myForm.get('source')?.errors?.['required']">Source is required</small>
+  </div>
+
+  <div>
+    <label for="destinationElem">Destination</label>
+    <select id="destinationElem" name="destinationElem" formControlName="destination">
+      <option value="0">Select</option>
+      @for (city of cityLookups; track city) {
+        <option [value]="city.key">{{city.value}}</option>
+      }
+    </select><br>
+    <small *ngIf="myForm.get('destination')?.errors?.['required']">Destination is required</small>
+  </div>
+
+  <div>
+    <label for="brokerageElem">Brokerage</label>
+    <input type="number" id="brokerageElem" name="brokerageElem" formControlName="brokerage">
+  </div>
+
+  <small *ngIf="myForm?.errors?.['notRequired']">Brokerage is not required while Source and Destinations are same</small>
+  <small *ngIf="myForm?.errors?.['required']">Brokerage is required</small><br>
+  <button type="submit" [disabled]="false">Sumbit</button>
+
+</form>
+
+<router-outlet />

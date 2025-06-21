@@ -1,0 +1,7 @@
+
+<h1>{{title}}</h1>
+
+<input type="number" [formControl]="textbox"><br>
+<small style="color: red;" *ngIf="textbox.errors?.['customValidationError']">Custom Validation Error</small><br>
+<button (click)="fnValidation()">Check</button>
+<router-outlet />

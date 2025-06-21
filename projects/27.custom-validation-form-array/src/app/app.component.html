@@ -1,0 +1,68 @@
+
+
+<h1>{{title}}</h1>
+
+<form [formGroup]="userForm" (submit)="fnSubmitForm()">
+  <div>
+    <label for="nameElem">Name</label>
+    <input type="text" name="nameElem" id="nameElem" formControlName="name"><br>
+    <small *ngIf="userForm.get('name')?.errors?.['required']">Name is required</small>
+  </div>
+  <div>
+    <label for="emailElem">Email</label>
+    <input type="text" name="emailElem" id="emailElem" formControlName="email"><br>
+    <small *ngIf="userForm.get('email')?.errors?.['required']">Email is required</small>
+    <!-- <small *ngIf="userForm.get('email').errors?.email">Invalid Email</small> -->
+  </div>
+  <div>
+    <label for="genderElem">Gender</label>
+    <select name="genderElem" id="genderElem" formControlName="gender">
+      <option value="0">Select</option>
+      @for (lookup of genderLoopup; track lookup){
+        <option [value]="lookup.value">{{lookup.value}}</option>
+      }
+    </select><br>
+    <small *ngIf="userForm.get('gender')?.errors?.['required']">Gender is required</small>
+  </div>
+
+  <div>
+    <label>Addresses:</label>
+    @for (addressCtrl of address; let i = $index; track addressCtrl) {
+      <div [formGroupName]="i" class="addressBlock">
+        <div>
+          <label>Address Type</label>
+          <select formControlName="addressType">
+            <option value="0">Select</option>
+            <option value="1">Domestic</option>
+            <option value="2">Commercial</option>
+          </select>
+          <small *ngIf="getAddressControl(i,'addressType')?.errors?.['required']">Gender is required</small>
+        </div>
+  
+        <div>
+          <label>Line 1</label>
+          <input type="text" formControlName="line1"><br>
+          <small *ngIf="getAddressControl(i,'line1').errors?.['required']">Address Line 1 is required</small>
+        </div>
+  
+        <div>
+          <label>Line 2</label>
+          <input type="text" formControlName="line2"><br>
+          <small *ngIf="getAddressControl(i,'line2').errors?.['required']">Address Line 2 is required</small>
+        </div>
+  
+        <div>
+          <label>City</label>
+          <input type="text" formControlName="city"><br>
+          <!-- <small *ngIf="getAddressControl(i,'city').errors?.['required']">City is required</small> -->
+        </div>
+      </div>
+    }
+  </div>
+  <button (click)="fnAddNewAddress()">Add Address</button> &nbsp; <button type="button" (click)="fnRemoveAddress()">Remove</button>
+  <div>
+    <button type="submit">submit</button>
+  </div>
+</form>
+
+<router-outlet />
