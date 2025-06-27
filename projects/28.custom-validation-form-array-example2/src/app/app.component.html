@@ -1,0 +1,51 @@
+<h1>{{ title }}</h1>
+
+<button (click)="fnAddNew()">Add</button><br>
+<button (click)="fnRemove()" [disabled]="isDisableRemoveBtn">Remove</button><br>
+
+<form [formGroup]="myForm" (submit)="fnSubmit()">
+  <div formArrayName="colors">
+    @for (ctrl of colorControls; let idx = $index; track ctrl) {
+      <div [formGroupName]="idx" class="address-group">
+        <label>Address: {{++idx}}</label>
+        <div class="form-elem">
+          <label>name</label>
+          <input type="text" formControlName="name" /> 
+          <small *ngIf="getAddressControl(idx, 'name')?.errors?.['required']">name is required</small>
+        </div>
+
+       <div class="form-elem">
+          <label>Line 1</label>
+          <input type="text" formControlName="line1" />
+          <small *ngIf="getAddressControl(idx, 'line1')?.errors?.['required']">Addres Line 1 is required</small>
+       </div>
+        
+       <div class="form-elem">
+        <label>Line 2</label>
+        <input type="text" formControlName="line2" />
+        <small *ngIf="getAddressControl(idx, 'line2')?.errors?.['required']">Addres Line 2 is required</small>
+       </div>
+
+       <div class="form-elem">
+        <label>City</label>
+        <select formControlName="city">
+          <option value="0">Select</option>
+          @for (citylookup of cityLookups; track citylookup){
+            <option value="{{citylookup.key}}">{{citylookup.value}}</option>
+          }
+        </select>
+        <small *ngIf="getAddressControl(idx, 'city')?.errors?.['required']">Addres Line 2 is required</small>
+       </div>
+        
+      </div>
+      <small *ngIf="frmArrayElem?.errors?.['invalid']">Invalid Addresses</small>   
+      <!--colorControls-->
+    }
+
+    <div>
+      <button type="submit" [disabled]="myForm.errors?.['invalid']">Submit</button>
+    </div>
+  </div>
+</form>
+
+<router-outlet />

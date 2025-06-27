@@ -1,0 +1,14 @@
+small{
+    color: red;
+}
+.address-group {
+    border: solid gray 2px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.form-elem{
+    padding: 5px;
+}
